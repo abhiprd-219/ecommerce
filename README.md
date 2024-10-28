@@ -1,11 +1,11 @@
 # Ecommerce
 ### Step to be followed in thi project:-
 
-The website should have 5 pages:
+The website should have 5 pages:<br>
 <b>Home Page</b><br>
 <b>Item listing page</b><br>
 <b>Single Item Page</b><br>
-</b>Cart Page (hard code the items in the cart)</b><br>
+<b>Cart Page (hard code the items in the cart)</b><br>
 <b>Checkout Page</b>
 
 ### Some pointers:

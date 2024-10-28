@@ -8,6 +8,45 @@ body {
     font-family: Arial, sans-serif;
 }
 
+@media (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+
+    .cart {
+        top: 10px;
+        right: 10px;
+    }
+
+    .cart img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .product-section {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .product h2 {
+        font-size: 14px;
+    }
+
+    .product button {
+        padding: 7px 12px;
+        font-size: 11px;
+    }
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -69,6 +108,8 @@ nav a {
 .product-section.side-by-side {
     flex-direction: row;
     justify-content: center;
+    
+    
 }
 
 .product {
@@ -80,7 +121,13 @@ nav a {
 .product img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease; 
 }
+
+.product img:hover {
+    transform: scale(1.1); }
+
+
 
 .product h2 {
     margin: 10px 0;
@@ -100,3 +147,5 @@ nav a {
     background-color: black;
     color: white;
 }
+
+
