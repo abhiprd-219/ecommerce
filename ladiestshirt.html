@@ -8,7 +8,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <script src="index.js"></script>
+    <style>
+        .container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.items-count {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+        
+    </style>
 </head>
 <body>
 
@@ -22,10 +98,10 @@
                
                    <a> <i class="fas fa-bars"></i></a>
                     <ul class="dropdown">
-                        <li><a href="#">Men's Outerwear</a></li>
-                        <li><a href="#">Ladies Outerwear</a></li>
-                        <li><a href="#">Men's T-Shirts</a></li>
-                        <li><a href="#">Ladies T-Shirts</a></li>
+                        <li><a href="/mensouterewar.html">Men's Outerwear</a></li>
+                        <li><a href="/ladiesouterwear.html">Ladies Outerwear</a></li>
+                        <li><a href="/menstshirt.html">Men's T-Shirts</a></li>
+                        <li><a href="/ladiestshirt.html">Ladies T-Shirts</a></li>
                     </ul>
                    
                 </label>
@@ -34,10 +110,10 @@
            
             <input type="checkbox" id="check">
             <ul>
-                <li><a href="#">Men's Outerwear</a></li>
-                <li><a href="#">Ladies Outerwear</a></li>
-                <li><a href="#">Men's T-Shirts</a></li>
-                <li><a href="#">Ladies T-Shirts</a></li>
+                <li><a href="/mensouterewar.html">Men's Outerwear</a></li>
+                <li><a href="/ladiesouterwear.html">Ladies Outerwear</a></li>
+                <li><a href="/menstshirt.html">Men's T-Shirts</a></li>
+                <li><a href="/ladiestshirt.html">Ladies T-Shirts</a></li>
             </ul>
         </nav>
         <div class = "shop"><h1><a href="index.html">SHOP</a></h1></div>
@@ -46,6 +122,72 @@
         </div>
     </div>
     
-    <h2>Ladies tshirt page</h2>
+    <div class="container">
+        <h2>Ladies Tshirts</h2>
+        <p class="items-count">(12 Items)</p>
+        <div class="grid">
+            <div class="product-card">
+                <img src="/img/menswear.jpg" alt="Men's Tech Shell Full-Zip">
+                <h3>Men's Tech Shell Full-Zip</h3>
+                <p>$50.20</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg" alt="Anvil LS Crew Neck - Grey">
+                <h3>Anvil LS Crew Neck - Grey</h3>
+                <p>$22.15</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg"  alt="Green Flex Fleece Zip Hoodie">
+                <h3>Green Flex Fleece Zip Hoodie</h3>
+                <p>$45.05</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg" alt="Green Jacket">
+                <h3>Green Jacket</h3>
+                <p>$60.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg" alt="YouTube Hoodie">
+                <h3>YouTube Hoodie</h3>
+                <p>$35.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg" alt="Google Zip Hoodie">
+                <h3>Google Zip Hoodie</h3>
+                <p>$40.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg" alt="Men's Tech Shell Full-Zip">
+                <h3>Men's Tech Shell Full-Zip</h3>
+                <p>$50.20</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg"  alt="Anvil LS Crew Neck - Grey">
+                <h3>Anvil LS Crew Neck - Grey</h3>
+                <p>$22.15</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg"  alt="Green Flex Fleece Zip Hoodie">
+                <h3>Green Flex Fleece Zip Hoodie</h3>
+                <p>$45.05</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg"  alt="Green Jacket">
+                <h3>Green Jacket</h3>
+                <p>$60.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg" alt="YouTube Hoodie">
+                <h3>YouTube Hoodie</h3>
+                <p>$35.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/img/menswear.jpg" alt="Google Zip Hoodie">
+                <h3>Google Zip Hoodie</h3>
+                <p>$40.00</p>
+            </div>
+        </div>
+        </div>
+        
 </body>
 </html>
