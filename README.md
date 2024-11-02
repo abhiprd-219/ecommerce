@@ -1,5 +1,7 @@
-# Ecommerce
-### Step to be followed in thi project:-
+# Ecommerce Shop
+### Step to be followed in this project:-
+
+
 
 The website should have 5 pages:<br>
 <b>Home Page</b><br>
