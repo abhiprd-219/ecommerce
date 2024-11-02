@@ -34,10 +34,10 @@
 
         <div class="mobile-menu">
           <ul>
-            <li><a href="mens-outerwear.html">Men's Outerwear</a></li>
-            <li><a href="ladies-outwear.html">Ladies Outerwear</a></li>
-            <li><a href="mens-outerwear.html">Men's T-Shirt</a></li>
-            <li><a href="mens-outerwear.html">Ladies T-Shirt</a></li>
+            <li><a href="/mensouterewar.html">Men's Outerwear</a></li>
+            <li><a href="ladiesouterwear.html">Ladies Outerwear</a></li>
+            <li><a href="/menstshirt.html">Men's T-Shirt</a></li>
+            <li><a href="/ladiestshirt.html">Ladies T-Shirt</a></li>
           </ul>
         </div>
         <div class="shadow"></div>
@@ -110,4 +110,11 @@
    
   
   </body>
+
+  <script>
+    document.querySelector(".fa-lg").onclick = () => {
+      document.querySelector(".mobile-menu").classList.toggle("active");
+      document.querySelector(".shadow").classList.toggle("active");
+    };
+  </script>
 </html>
