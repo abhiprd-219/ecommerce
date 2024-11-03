@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="mensouterwearstyle.css" />
     <link rel="stylesheet" href="commonStyle.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header container-header">
@@ -39,10 +40,12 @@
             <li><a href="/ladiestshirt.html">Ladies T-Shirt</a></li>
           </ul>
         </div>
+
         <div class="shadow"></div>
       </nav>
     </header>
-    <!-- main-code -->
+   
+
     <main>
       <div class="outer-img-container">
         <img
@@ -152,11 +155,23 @@
         </div>
       </div>
     </main>
-    <!-- footer -->
+   
     <footer class="footer">
       <p>Made by Abhi</p>
       <button class="footer-button">DEMO ONLY</button>
     </footer>
+
+    <script>
+      document.querySelector(".fa-lg").onclick = () => {
+        document.querySelector(".mobile-menu").classList.toggle("active");
+        document.querySelector(".shadow").classList.toggle("active");
+      };
+  
+      document.querySelector(".shadow").onclick = () => {
+      document.querySelector(".mobile-menu").classList.remove("active");
+      document.querySelector(".shadow").classList.remove("active");
+    };
+    </script>
 
   </body>
 </html>
