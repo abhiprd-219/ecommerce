@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkout</title>
+    <link rel="stylesheet" href="./commonStyle.css" />
+    <link rel="stylesheet" href="./checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header container-header">
+      <nav>
+        <div class="top-container-header">
+          <div class="left-sidebar">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </div>
+          <a href="index.html"> <h3 class="shop">SHOP</h3></a>
+          <div class="right-sidebar">
+            <a href="cart.html"
+              ><i class="fa-solid fa-cart-shopping fa-1g"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="mobile-menu">
+          <ul>
+            <li><a href="/mensouterewar.html">Men's Outerwear</a></li>
+            <li><a href="/ladiesouterwear.html">Ladies Outerwear</a></li>
+            <li><a href="/menstshirt.html">Men's T-Shirt</a></li>
+            <li><a href="/ladiestshirt.html">Ladies T-Shirt</a></li>
+          </ul>
+        </div>
+        <div class="shadow"></div>
+      </nav>
+    </header>
+    <main>
+      <header class="heading">
+        <h3>Checkout</h3>
+        <p id="description">Shop is a demo app - form data will not be sent</p>
+      </header>
+      <div class="container">
+        <!-- account info -->
+        <div class="account-info">
+          <h5>Account Information</h5>
+          <div class="floating-label">
+            <input type="text" id="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="floating-label">
+            <input type="text" id="phone" required />
+            <label for="phone">Phone Number</label>
+          </div>
+          <h5>Shipping Address</h5>
+          <div class="floating-label">
+            <input type="text" id="address" required />
+            <label for="address">Address</label>
+          </div>
+          <div class="floating-label">
+            <input type="text" id="city" required />
+            <label for="city">City</label>
+          </div>
+          <div class="state-code">
+            <div class="floating-label">
+              <input type="text" id="state" required />
+              <label for="state">State/Province</label>
+            </div>
+            <div class="floating-label">
+              <input type="text" id="zip" required />
+              <label for="zip">Zip/Postal Code</label>
+            </div>
+          </div>
+          <p>Country</p>
+          <select id="country" class="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+          </select>
+          <p class="billing-address">Billing Address</p>
+          <div class="chekcbox-data">
+            <input type="checkbox" id="address" />
+            <label for="address">Use different billing address</label>
+          </div>
+        </div>
+        <!-- payment-method -->
+        <div class="payment-method">
+          <h5>Payment Method</h5>
+          <div class="floating-label">
+            <input type="text" id="cardholder-name" required />
+            <label for="cardholder-name">Cardholder Name</label>
+          </div>
+          <div class="floating-label">
+            <input type="text" id="card-number" required />
+            <label for="card-number">Card Number</label>
+          </div>
+          <p>Expiry</p>
+          <div class="expiry">
+            <select id="month" required>
+              <option value="01">Jan</option>
+              <option value="02">Feb</option>
+              <option value="03">Mar</option>
+              <option value="04">Apr</option>
+              <option value="05">May</option>
+              <option value="06">Jun</option>
+              <option value="07">Jul</option>
+              <option value="08">Aug</option>
+              <option value="09">Sep</option>
+              <option value="10">Oct</option>
+              <option value="11">Nov</option>
+              <option value="12">Dec</option>
+            </select>
+
+            <select id="year" required>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+
+            <div class="floating-label">
+              <input type="text" id="cvv" required />
+              <label for="cvv" id="cvv">CVV</label>
+            </div>
+          </div>
+          <div class="order-summary">
+            <h5 class="summary">Order Summary</h5>
+            <div class="product-price-container">
+              <div class="product"><b>Recycle Plastic Bottle Hoodie-Green</b> </div>
+              <div class="price">$60.09</div>
+            </div>
+ 
+            <div class="total-cart">
+              <p>Total</p>
+              <div class="price">$201</div>
+            </div>
+            <button class="place-order">PLACE ORDER</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Made by Abhi</p>
+      <button class="footer-button">DEMO ONLY</button>
+    </footer>
+    <script>
+      document.querySelector(".fa-lg").onclick = () => {
+        document.querySelector(".mobile-menu").classList.toggle("active");
+        document.querySelector(".shadow").classList.toggle("active");
+      };
+  
+      document.querySelector(".shadow").onclick = () => {
+      document.querySelector(".mobile-menu").classList.remove("active");
+      document.querySelector(".shadow").classList.remove("active");
+    };
+    </script>
+  </body>
+</html>

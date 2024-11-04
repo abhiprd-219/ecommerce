@@ -117,24 +117,15 @@
     </footer>
 
     <script>
-      const hamBurgerButton = document.querySelector(".fa-lg");
-      const mobileMenu = document.querySelector(".mobile-menu");
-      const shadow = document.querySelector(".shadow");
+      document.querySelector(".fa-lg").onclick = () => {
+        document.querySelector(".mobile-menu").classList.toggle("active");
+        document.querySelector(".shadow").classList.toggle("active");
+      };
   
-      hamBurgerButton.addEventListener("click", () => {
-        mobileMenu.classList.add("active");
-        shadow.classList.add("active");
-      });
-  
-      shadow.addEventListener("click", function (event) {
-        if (
-          !hamBurgerButton.contains(event.target) &&
-          !mobileMenu.contains(event.target)
-        ) {
-          mobileMenu.classList.remove("active");
-          shadow.classList.remove("active");
-        }
-      });
+      document.querySelector(".shadow").onclick = () => {
+      document.querySelector(".mobile-menu").classList.remove("active");
+      document.querySelector(".shadow").classList.remove("active");
+    };
     </script>
   
   </body>
