@@ -110,10 +110,10 @@
       margin: 1rem 0 0 0;
       height: 4rem;
       border: none;
-      background-color: #190572;
+      background-color: #201f20;
     }
     .checkout-button:hover {
-      background-color: #190572;
+      background-color: #414042;
     }
   }
   /* medium */

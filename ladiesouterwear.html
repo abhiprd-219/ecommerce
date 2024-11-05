@@ -46,7 +46,7 @@
     <main>
       <div class="outer-img-container">
         <img
-          src="https://shop.polymer-project.org/esm-bundled/images/mens_outerwear.jpg"
+          src="https://shop.polymer-project.org/esm-bundled/images/ladies_outerwear.jpg"
           alt="mens-outerwear"
           class="big-image"
         />
@@ -54,51 +54,51 @@
       <div class="container-middle">
         <header class="heading">
           <p>Ladies's Outerwear</p>
-          <span> &#40;16items&#41;</span>
+          <span> &#40;14items&#41;</span>
         </header>
 
         <div class="container-items">
-          <div class="each-item">
-            <a href="#"
-              ><img
-                src="https://shop.polymer-project.org/esm-bundled/data/images/10-15068B.jpg"
+          <div class="each-item"  onclick="logItemData(event)">
+            <a href="/individualitem.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-24102B.jpg"
                 alt="first-image"
             /></a>
             <p class="item-name">Means Tech Shell Full-Zip</p>
             <span class="item-amount">&dollar;50.20</span>
           </div>
-          <div class="each-item">
-            <a href="#">
+          <div class="each-item"  onclick="logItemData(event)">
+            <a href="/individualitem.html">
               <img
-                src="https://shop.polymer-project.org/esm-bundled/data/images/10-14154B.jpg"
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-25058B.jpg"
                 alt="second-image"
               />
             </a>
             <p class="item-name">Anvil L/S Crew Neck-Grey</p>
             <span class="item-amount">&dollar;22.15</span>
           </div>
-          <div class="each-item">
-            <a href="#">
+          <div class="each-item"  onclick="logItemData(event)">
+            <a href="/individualitem.html">
               <img
-                src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-24101B.jpg"
                 alt="third-image"
               />
             </a>
             <p class="item-name">Green Flex Fleece Zip Hoodie</p>
             <span class="item-amount">&dollar;45.65</span>
           </div>
-          <div class="each-item">
-            <a href="#">
+          <div class="each-item"  onclick="logItemData(event)">
+            <a href="/individualitem.html">
               <img
-                src="https://shop.polymer-project.org/esm-bundled/data/images/10-15041B.jpg"
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-24097B.jpg"
                 alt="four-image"
               />
             </a>
             <p class="item-name">Android Nylon Packable</p>
             <span class="item-amount">&dollar;33.60</span>
           </div>
-          <div class="each-item">
-            <a href="#">
+          <div class="each-item"  onclick="logItemData(event)">
+            <a href="/individualitem.html">
               <img
                 src="https://shop.polymer-project.org/esm-bundled/data/images/10-14133B.jpg"
                 alt="third-image"
@@ -107,48 +107,29 @@
             <p class="item-name">YouTube Ultimate Hooded Sweatshirt</p>
             <span class="item-amount">&dollar;32.35</span>
           </div>
-          <div class="each-item">
-            <a href="#">
+          <div class="each-item"  onclick="logItemData(event)">
+            <a href="/individualitem.html">
               <img
-                src="https://shop.polymer-project.org/esm-bundled/data/images/10-14160B.jpg"
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-24099B.jpg"
                 alt="third-image"
               />
             </a>
             <p class="item-name">Gray Heather Fleece Zip Hoodie</p>
             <span class="item-amount">&dollar;38.85</span>
           </div>
-          <div class="each-item">
+          <div class="each-item"  onclick="logItemData(event)">
+            <a href="/individualitem.html">
             <img
               src="https://shop.polymer-project.org/esm-bundled/data/images/10-14153B.jpg"
               alt="third-image"
             />
+            </a>
             <p class="item-name">Vastrm Hoodie</p>
             <span class="item-amount">&dollar;200.00</span>
           </div>
-          <div class="each-item">
-            <img
-              src="https://shop.polymer-project.org/esm-bundled/data/images/10-14158B.jpg"
-              alt="third-image"
-            />
-            <p class="item-name">Recycle Plastic Bottle Hoodie-Green</p>
-            <span class="item-amount">&dollar;609.65</span>
-          </div>
-          <div class="each-item">
-            <img
-              src="https://shop.polymer-project.org/esm-bundled/data/images/10-14152B.jpg"
-              alt="third-image"
-            />
-            <p class="item-name">Green Flex Fleece Zip Hoodie</p>
-            <span class="item-amount">&dollar;45.65</span>
-          </div>
-          <div class="each-item">
-            <img
-              src="https://shop.polymer-project.org/esm-bundled/data/images/10-14155B.jpg"
-              alt="third-image"
-            />
-            <p class="item-name">Green Flex Fleece Zip Hoodie</p>
-            <span class="item-amount">&dollar;45.65</span>
-          </div>
+       
+         
+         
         </div>
       </div>
     </main>
@@ -159,6 +140,32 @@
     </footer>
 
     <script>
+
+
+
+  // Get the parent container of the clicked item and also get the specific item container that was clicked
+  function logItemData(event) {
+     const itemContainer = event.currentTarget.closest(".each-item");
+
+  // Get the name, price, and image of the clicked item only
+  const itemName = itemContainer.querySelector(".item-name").innerText;
+  const itemPrice = itemContainer.querySelector(".item-amount").innerText;
+  const itemImage = itemContainer.querySelector("img").src;
+
+
+  //store in
+          localStorage.setItem("itemName", itemName);
+          localStorage.setItem("itemPrice", itemPrice);
+          localStorage.setItem("itemImage", itemImage);
+
+  // Log the data to the console
+  console.log("Item Name:", itemName);
+  console.log("Item Price:", itemPrice);
+  console.log("Image Source:", itemImage);
+}
+
+
+
       document.querySelector(".fa-lg").onclick = () => {
         document.querySelector(".mobile-menu").classList.toggle("active");
         document.querySelector(".shadow").classList.toggle("active");

@@ -12,6 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 .bottom-container-header {
+  
   display: flex;
   justify-content: center;
   gap: 0 2rem;

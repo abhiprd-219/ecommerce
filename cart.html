@@ -88,7 +88,7 @@
         <!-- Hard Code -->
         <div class="total-amount">
           <h4>Total</h4>
-          <h4>$120.18</h4>
+          <h4 class="changePrice">$120.18</h4>
           <a href="/checkout.html"
             ><button class="checkout-button">CHECKOUT</button></a>
         </div>
@@ -99,6 +99,41 @@
       <button class="footer-button">DEMO ONLY</button>
     </footer>
     <script>
+
+  const itemName = localStorage.getItem("itemName");
+  const itemPrice = localStorage.getItem("itemPrice");
+  const itemImage = localStorage.getItem("itemImage");
+
+  document.querySelector('.item-description').innerText = itemName;
+  document.querySelector('#price').innerText = itemPrice;
+// Change the image inside the .image-container
+  document.querySelector('.image-container').innerHTML =`  <img src="${itemImage}" alt="Selected item" /> `;
+
+
+  console.log(itemName+" "+itemPrice+" "+itemImage);
+
+       var quantity = document.querySelector('#quantity').innerHTML;
+       
+
+       var priceChange = document.querySelector('.changePrice').innerHTML;
+       console.log(priceChange);
+
+       var actualPrice = parseFloat(priceChange.replace('$',''));
+       var acctualPrice = actualPrice * parseInt(quantity);
+
+       console.log(`$${acctualPrice.toFixed(2)}`);
+
+
+    
+    //   let updatedPrice = parseFloat(priceChange)+ 9.09; 
+    //   // let actualPrice = updatedPrice.toString;
+
+    //  // document.querySelector('.changePrice').innerHTML = actualPrice;
+    //   console.log(updatedPrice);
+
+      //hamburger
+
+
       document.querySelector(".fa-lg").onclick = () => {
         document.querySelector(".mobile-menu").classList.toggle("active");
         document.querySelector(".shadow").classList.toggle("active");

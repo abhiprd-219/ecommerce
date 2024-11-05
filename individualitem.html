@@ -24,17 +24,17 @@
           </div>
         </div>
         <ul class="bottom-container-header">
-          <li><a href="mens-outerwear.html">Men's Outerwear</a></li>
-          <li><a href="ladies-outwear.html">Ladies Outerwear</a></li>
-          <li><a href="means-tshirts.html">Men's T-Shirts</a></li>
-          <li><a href="ladies-tshirt.html">Ladies T-Shirts</a></li>
+          <li><a href="/mensouterewar.html">Men's Outerwear</a></li>
+          <li><a href="/ladiesouterwear.html">Ladies Outerwear</a></li>
+          <li><a href="/menstshirt.html">Men's T-Shirts</a></li>
+          <li><a href="/ladiestshirt.html">Ladies T-Shirts</a></li>
         </ul>
         <div class="mobile-menu">
           <ul>
-            <li><a href="mens-outerwear.html">Men's Outerwear</a></li>
-            <li><a href="mens-outerwear.html">Ladies Outerwear</a></li>
-            <li><a href="mens-outerwear.html">Men's T-Shirt</a></li>
-            <li><a href="mens-outerwear.html">Ladies T-Shirt</a></li>
+            <li><a href="/mensouterewar.html">Men's Outerwear</a></li>
+            <li><a href="/ladiesouterwear.html">Ladies Outerwear</a></li>
+            <li><a href="/menstshirt.html">Men's T-Shirts</a></li>
+            <li><a href="/ladiestshirt.html">Ladies T-Shirts</a></li>
           </ul>
         </div>
         <div class="shadow"></div>
@@ -54,7 +54,7 @@
         <!-- data -->
         <div class="imag-data">
           <h1>Recycle Plastic Bottle Hoodie-Green</h1>
-          <p>&dollar;60.9</p>
+          <p class = "price" >&dollar;60.9</p>
           <!-- sizes -->
           <div class="select-option">
             <hr />
@@ -93,7 +93,7 @@
             <p>Features</p>
             <ul>
               <li>
-                50% recycled cotton, 50% recycled polyester.              </li>
+                50% recycled cotton, 50% recycled polyester.</li>
               <li>
                 Full zipper and orange drawstring pulls.
               </li>
@@ -117,6 +117,23 @@
     </footer>
 
     <script>
+
+
+  const itemName = localStorage.getItem("itemName");
+  const itemPrice = localStorage.getItem("itemPrice");
+  const itemImage = localStorage.getItem("itemImage");
+
+  document.querySelector('h1').innerText = itemName;
+  document.querySelector('.price').innerText = itemPrice;
+// Change the image inside the .image-container
+  document.querySelector('.image-container').innerHTML =`  <img src="${itemImage}" alt="Selected item" /> `;
+
+
+  console.log(itemName+" "+itemPrice+" "+itemImage);
+
+
+
+// Hamburger icon part
       document.querySelector(".fa-lg").onclick = () => {
         document.querySelector(".mobile-menu").classList.toggle("active");
         document.querySelector(".shadow").classList.toggle("active");
