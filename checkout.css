@@ -160,11 +160,11 @@ h2 {
     width: 100%;
     margin: 1rem 0 0 0;
     height: 4rem;
-    background-color: #190572;
+    background-color: #464547;
     cursor: pointer;
   }
   .place-order:hover {
-    background-color: #190572;
+    background-color: #353436;
   }
 }
 

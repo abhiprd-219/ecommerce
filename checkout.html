@@ -134,7 +134,8 @@
               <p>Total</p>
               <div class="price">$201</div>
             </div>
-            <button class="place-order">PLACE ORDER</button>
+            <a href = "/thankyou.html">
+            <button class="place-order">PLACE ORDER</button></a>
           </div>
         </div>
       </div>
@@ -145,15 +146,15 @@
       <button class="footer-button">DEMO ONLY</button>
     </footer>
     <script>
-      document.querySelector(".fa-lg").onclick = () => {
-        document.querySelector(".mobile-menu").classList.toggle("active");
-        document.querySelector(".shadow").classList.toggle("active");
-      };
-  
-      document.querySelector(".shadow").onclick = () => {
-      document.querySelector(".mobile-menu").classList.remove("active");
-      document.querySelector(".shadow").classList.remove("active");
+    document.querySelector(".fa-lg").onclick = () => {
+      document.querySelector(".mobile-menu").classList.toggle("active");
+      document.querySelector(".shadow").classList.toggle("active");
     };
-    </script>
+
+    document.querySelector(".shadow").onclick = () => {
+    document.querySelector(".mobile-menu").classList.remove("active");
+    document.querySelector(".shadow").classList.remove("active");
+  };
+  </script>
   </body>
 </html>
