@@ -93,6 +93,18 @@ a{
   text-decoration: none;
 }
 
+.noOfItems{
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+ 
+}
+
 .shop {
   color: black;
   font-size: medium;
