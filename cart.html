@@ -40,7 +40,7 @@
     <main class="main-container">
       <div class="heading">
         <h4>Your Cart</h4>
-        <span>(item-1)</span>
+        <span>(1 item)</span>
       </div>
       <div class="main-frame">
         <div class="cart-container">
@@ -52,7 +52,7 @@
           </div>
         
           <div class="web-container">
-            <p class="item-description"><b>Recycle Plastic Bottle Hoodie-Green</b></p>
+            <p class="item-description"><b>item-description</b></p>
             <div class="select-quantity">
               <label for="quantity" id="quantity">Qty</label>
               <select id="quantity">
@@ -69,7 +69,7 @@
          
           <div class="mobile-container">
             <div class="row1">
-              <p class="item-description"><b>item-description</b> </p>
+              <p class="item-description-mobile"><b>item-description</b> </p>
               <div class="icon"><i class="fa-solid fa-xmark" id="icon"></i></div>
             </div>
             <div class="select-quantity row2">
@@ -81,7 +81,7 @@
                 <option value="4">4</option>
               </select>
               <div id="size">Size: L</div>
-              <div id="price">&dollar;price</div>
+              <div id="price-mobile">&dollar;price</div>
             </div>
           </div>
         </div>
@@ -105,7 +105,9 @@
   const itemImage = localStorage.getItem("itemImage");
 
   document.querySelector('.item-description').innerText = itemName;
+  document.querySelector('.item-description-mobile').innerText = itemName;
   document.querySelector('#price').innerText = itemPrice;
+  document.querySelector('#price-mobile').innerText = itemPrice;
   document.querySelector('.changePrice').innerText = itemPrice;
   document.querySelector('.image-container').innerHTML =`  <img src="${itemImage}" alt="Selected item" /> `;
 
