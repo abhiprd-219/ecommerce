@@ -96,7 +96,7 @@ a{
 .noOfItems{
   width: 20px;
   height: 20px;
-  background-color: blue;
+  background-color: rgb(40, 40, 78);
   color: white;
   display: flex;
   justify-content: center;
