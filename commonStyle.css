@@ -125,7 +125,7 @@ button:hover {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .left-sidebar {
     visibility: hidden;
   }

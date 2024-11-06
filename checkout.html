@@ -126,13 +126,13 @@
           <div class="order-summary">
             <h5 class="summary">Order Summary</h5>
             <div class="product-price-container">
-              <div class="product"><b>Recycle Plastic Bottle Hoodie-Green</b> </div>
-              <div class="price">$60.09</div>
+              <div class="product"><b>item-name</b> </div>
+              <div class="price">price</div>
             </div>
  
             <div class="total-cart">
               <p>Total</p>
-              <div class="price">$201</div>
+              <div class="totalPrice">price</div>
             </div>
             <a href = "/thankyou.html">
             <button class="place-order">PLACE ORDER</button></a>
@@ -147,6 +147,20 @@
       <button class="footer-button">DEMO ONLY</button>
     </footer>
     <script>
+
+  const itemName = localStorage.getItem("itemName");
+  const itemPrice = localStorage.getItem("itemPrice");
+  
+
+  document.querySelector('.product').innerText = itemName;
+  document.querySelector('.price').innerText = itemPrice;
+  document.querySelector('.totalPrice').innerText = itemPrice;
+
+
+  console.log(itemName+" "+itemPrice);
+
+
+
     document.querySelector(".fa-lg").onclick = () => {
       document.querySelector(".mobile-menu").classList.toggle("active");
       document.querySelector(".shadow").classList.toggle("active");
